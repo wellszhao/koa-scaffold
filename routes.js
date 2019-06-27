@@ -1,7 +1,6 @@
 const router = require('koa-router')()
+const Cntrl = require('./cntrl/cntrl')
 
-router.get("/", async function (ctx) {
-    ctx.body = {message: "Hello World!"}
-});
+router.get("/", Cntrl.hello);
 
 module.exports = router
